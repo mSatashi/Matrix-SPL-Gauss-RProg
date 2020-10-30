@@ -64,7 +64,9 @@ echelon(D,E)
 X<- matrix(1:9, nrow=3, byrow=TRUE)
 Y<-X
 if(Y[1,1] == X[1,1]) { 
-  Y[Y<4]<-0;Y
+  for(j in 1:3){
+    Y[1,j] <- 0;Y
+  }
   for(i in 2:3){
     Y[i,1] <-1;Y
   }
